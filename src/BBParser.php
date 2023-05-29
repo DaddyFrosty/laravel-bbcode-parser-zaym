@@ -26,10 +26,15 @@ class BBParser
      *
      * @param  string  $source
      * @param  bool  $caseInsensitive
+     * @param  bool  $escapeHTML Escapes HTML tags
      * @return string
      */
-    public function parse(string $source, bool $caseInsensitive = false) : string
+    public function parse(string $source, bool $caseInsensitive = false, bool $escapeHTML = true ) : string
     {
+		if ( $escapeHTML ) {
+			$source = htmlentities( $source );
+		}
+
         foreach ($this->enabledBBCodes as $name => $parser) {
             $pattern = ($caseInsensitive) ? $parser['pattern'] . 'i' : $parser['pattern'];
 
