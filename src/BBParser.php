@@ -142,9 +142,9 @@ class BBParser
      * @param  string  $content
      * @return self
      */
-    public function addTag(string $name, string $search, string $replace, string $content) : self
+    public function addTag(string $name, string $pattern, string $replace, string $content) : self
     {
-        $this->bbcodes[$name] =compact('search', 'replace', 'content');
+        $this->bbcodes[$name] =compact('pattern', 'replace', 'content');
         $this->enabledBBCodes[$name] = $this->bbcodes[$name];
 
         return $this;
