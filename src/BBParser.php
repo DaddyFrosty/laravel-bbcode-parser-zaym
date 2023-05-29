@@ -1,6 +1,6 @@
 <?php
 
-namespace Ammar\BBCode;
+namespace BBCode;
 
 class BBParser
 {

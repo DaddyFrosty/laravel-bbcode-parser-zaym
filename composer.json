@@ -1,5 +1,5 @@
 {
-    "name": "ammarkannas/laravel-bbcode-parser",
+    "name": "daddyfrosty/laravel-bbcode-parser-zaym",
     "description": "Parse your bbcode easy with this library.",
     "keywords": ["bbcode", "parser", "laravel"],
     "type": "library",
@@ -9,16 +9,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Ammar\\BBCode\\": "src/"
+            "BBCode\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ammar\\BBCode\\BBCodeServiceProvider"
+                "BBCode\\BBCodeServiceProvider"
             ],
             "aliases": {
-                "BBCode": "Ammar\\BBCode\\Facades\\BBCode"
+                "BBCode": "BBCode\\Facades\\BBCode"
             }
         }
     },
